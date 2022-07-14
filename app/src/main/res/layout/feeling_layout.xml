@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/feel_cardview"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#FFCF26"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/feel_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_greatreaction" />
+
+            <TextView
+                android:id="@+id/text_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/feel_image"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="APR" />
+
+            <TextView
+                android:id="@+id/text_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_month"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/feel_image"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="12" />
+
+            <TextView
+                android:id="@+id/text_feelingTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/feel_image"
+                android:layout_alignEnd="@+id/feel_image"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Feeling" />
+
+            <TextView
+                android:id="@+id/text_feeling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_feelingTag"
+                android:layout_alignEnd="@+id/feel_image"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="GREAT" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_cardview"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#F0F0F0"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+
+            <ImageView
+                android:id="@+id/icon_add"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_add" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

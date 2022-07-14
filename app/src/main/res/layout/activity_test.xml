@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0DCF7"
+    tools:context=".activity.test">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_back"/>
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_cross"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rv_question"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/shape_radius_001">
+
+        <TextView
+            android:id="@+id/test_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Question 1 of 10" />
+
+        <TextView
+            android:id="@+id/test_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/test_page"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Feeling down, depressed, or hopeless?"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        app:chipSpacingHorizontal="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rv_question">
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_una"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:checkable="true"
+            android:textAlignment="center"
+            android:text="Not at all"
+            android:textSize="30dp"
+            style="@style/ChipCustomStyle"/>
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_dalawa"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:checkable="true"
+            android:textAlignment="center"
+            android:text="Several days"
+            android:textSize="30dp"
+            style="@style/ChipCustomStyle"/>
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_tatlo"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:checkable="true"
+            android:textAlignment="center"
+            android:text="More than half of the days"
+            android:textSize="20dp"
+            style="@style/ChipCustomStyle"/>
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_apat"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:checkable="true"
+            android:textAlignment="center"
+            android:text="Nearly every day"
+            android:textSize="30dp"
+            style="@style/ChipCustomStyle"/>
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:contentDescription="Sample"
+            app:backgroundTint="@android:color/white"
+            app:srcCompat="@drawable/icon_next"
+            app:tint="@android:color/black" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:contentDescription="Sample"
+            android:visibility="gone"
+            app:backgroundTint="@android:color/white"
+            app:srcCompat="@drawable/icon_check"
+            app:tint="@android:color/black" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
